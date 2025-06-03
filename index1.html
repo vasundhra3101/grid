@@ -1,0 +1,101 @@
+<head>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .grid-container{
+            display:grid;
+            grid-template-areas: 
+            "header header header"
+            "nav main right"
+            "footer footer footer";
+            grid-template-columns: 1fr 2fr 3fr;
+            gap:10px;
+            padding: 10px;
+        }
+        .header{
+            grid-area: header;
+            background-color: aqua;
+            padding: 20px;
+            text-align: center;
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .nav{
+            grid-area: nav;
+            background-color: blue;
+            padding:20px;
+        }
+        .main{
+           grid-area:main;
+            background-color: rgb(0, 255, 4);
+            padding:20px; 
+            overflow-y: auto;
+        }
+        .right{
+            grid-area: right;
+            background-color: rgb(255, 81, 0);
+            padding:20px;
+        }
+        .footer{
+            grid-area:footer;
+            background-color: blueviolet;
+            padding: 20px;
+            text-align: center;
+        }
+        a{
+            color: rgb(250, 215, 243);
+            text-decoration: none;
+            display: block;
+            margin: 10px;
+        }
+        h3{
+            margin-top: 40px;
+        }
+    </style>
+</head>
+<body>
+    <div class="grid-container">
+        <div class="header">A beautiful paragraph with css layout</div>
+        <div class="nav">
+            <h3>Navigation</h3>
+            <a href="section-1">Introduction</a>
+            <a href="section-2">Narrative Essay Topics</a>
+            <a href="section-3">Compare and Contrast Essay Topics</a>
+            <a href="section-4">Cause and Effect Essay Topics</a>
+            <a href="section-5">conclusion</a>
+        </div>
+        <div class="main">
+            <h2 id="section-1">Introduction</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum, voluptas minus autem sit maiores, aspernatur fugit eos corporis ipsum sapiente debitis beatae omnis. Consequatur nemo, necessitatibus minus repellat ducimus nulla.</p>
+            <h2 id="section-2">Narrative Essay Topics</h2>
+            <p>A narrative essay is a type of writing that tells the writer's story and experiences. The writer's point of view and life events entertain the audience in this essay type.</p>
+            <h2 id="section-3">Compare and Contrast Essay Topics</h2>
+            <p>In a compare and contrast essay, you show how two things are similar and different. This essay type is easy to write because you don’t need to use facts, but you have to express your thoughts.</p>
+            <h2 id="section-4">Cause and Effect Essay Topics</h2>
+            <ul>
+                <li>Mobile healthcare units or stationary clinics.</li>
+                <li>Formulas of two different chemical reactions.</li>
+                <li>Chocolate and marmalade candies.</li>
+                <li>British colonization and Spanish colonization.</li>
+                <li>Public vs. private transportation.</li>
+            </ul>
+            <h2 id="section-5">conclusion</h2>
+            <P>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat quo perferendis excepturi saepe? Quis, repudiandae quibusdam. Ullam reprehenderit praesentium soluta fugiat! Ipsam dolor obcaecati asperiores incidunt veritatis fuga? Aliquid, nesciunt?</P>
+        </div>
+        <div class="right">
+            <h2>Sidebar</h2>
+            <p><strong>Note:</strong>An expository essay's main goal is to explain a process or a cause-and-effect relationship.</p>
+            <ul>
+                <li>grid-template-columns</li>
+                <li>grid-area</li>
+                <li>grid-template-rows</li>
+                <li>gap</li>
+            </ul>
+            <p>contact:vasuvs@example.com</p>
+        </div>
+        <div class="footer">
+            &copy;2025 web design lab.All in the websites are reserved.
+        </div>
+    </div>
+</body>
