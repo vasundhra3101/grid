@@ -1,5 +1,6 @@
 <head>
     <style>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         body{
             font-family: Arial, Helvetica, sans-serif;
         }
@@ -51,6 +52,17 @@
         }
         h3{
             margin-top: 40px;
+        }
+        @media and (max-width:768px) {
+            .grid{
+                grid-template-areas:
+                    "header"
+                    "nav"
+                    "main"
+                    "right"
+                    "footer";
+                grid-template-columns:1fr;
+            }
         }
     </style>
 </head>
