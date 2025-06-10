@@ -53,17 +53,17 @@
         h3{
             margin-top: 40px;
         }
-        @media (max-width: 768px) {
-      .grid {
-        grid-template-areas:
-          "header"
-          "nav"
-          "main"
-          "right"
-          "footer";
-        grid-template-columns: 1fr; /* single column layout */
-      }
-    }
+        @media and (max-width:768px) {
+            .grid{
+                grid-template-areas:
+                    "header"
+                    "nav"
+                    "main"
+                    "right"
+                    "footer";
+                grid-template-columns:1fr;
+            }
+        }
     </style>
 </head>
 <body>
