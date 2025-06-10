@@ -1,40 +1,81 @@
-<head>
-    <style>
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        body{
-            font-family: Arial, Helvetica, sans-serif;
-        }
-        .grid-container{
-            display:grid;
-            grid-template-areas: 
-            "header header header"
-            "nav main right"
-            "footer footer footer";
-            grid-template-columns: 1fr 2fr 3fr;
-            grid-template-rows:100px 3500px 100px;
-            gap:10px;
-            padding: 10px;
-        }
-        .header{
-            grid-area: header;
-            background-color: aqua;
-            padding: 20px;
-            text-align: center;
-            font-size: 24px;
-            font-weight: bold;
-        }
-        .nav{
-            grid-area: nav;
-            background-color: blue;
-            padding:20px;
-        }
-        .main{
-           grid-area:main;
-            background-color: rgb(0, 255, 4);
-            padding:20px; 
-            overflow-y: auto;
-        }
-         .sidebar{
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style>
+            .grid{
+                display: grid;
+                background-color: aliceblue;
+                grid-template-areas: 
+                "header header header"
+                "navigation content sidebar"
+                "footer footer footer";
+                grid-template-columns: 1fr 1fr 1fr;
+                grid-template-rows: 100px 3500px 100px;
+                overflow-x: auto;
+                gap: 15px;
+                padding: 10px;
+            }
+            .header{
+                grid-area: header;
+                background-color: blueviolet;
+                padding: 5px;
+            }
+            .header{
+                font-family: cursive;
+                color: azure;
+                text-align: center;
+            }
+            .navigation{
+                grid-area: navigation;
+                background-color: chocolate;
+                padding: 15px;
+            }
+            .navigation h2{
+                color:lavender;
+                font-family: cursive;
+                font-size: 35px;
+            }
+            .navigation ul{
+                list-style: none;
+            }
+            .navigation a{
+                text-decoration: none;
+                color: black;
+                font-size: 20px;
+            }
+            .navigation li{
+                margin-bottom: 20px;
+            }
+            .content{
+                grid-area: content;
+                background-color: crimson;
+                padding: 15px;
+            }
+            .content h3{
+                color: cornsilk;
+                font-family: cursive;
+                font-size: 30px;
+            }
+            .content p{
+                color: rgb(13, 13, 14);
+                font-size: 20px;
+                font-family: Arial, Helvetica, sans-serif;
+            }
+            .content ul{
+                list-style: square;
+                color: rgb(13, 13, 14);
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: 20px;
+            }
+            .content li{
+                margin-bottom: 5px;
+            }
+            .content h4{
+                color: lavender;
+                font-family: serif;
+                font-size: 25px;
+            }
+            .sidebar{
                 grid-area: sidebar;
                 background-color: darkmagenta;
                 padding: 10px;
@@ -53,81 +94,113 @@
             .sidebar p{
                 font-size: 20px;
             }
-        .footer{
-            grid-area:footer;
-            background-color: blueviolet;
-            padding: 20px;
-            text-align: center;
-        }
-        a{
-            color: rgb(250, 215, 243);
-            text-decoration: none;
-            display: block;
-            margin: 10px;
-        }
-        h3{
-            margin-top: 40px;
-        }
-        @media (max-width: 768px) 
-        {
-            .grid{
-                grid-template-areas:
-                    "header"
-                    "nav"
-                    "main"
-                    "right"
-                    "footer";
-                grid-template-columns:1fr;
+            .footer{
+                grid-area: footer;
+                background-color:darkslateblue ;
+                padding: 10px;
             }
-        }
-    </style>
-</head>
-<body>
-    <div class="grid-container">
-        <div class="header">
-            A beautiful paragraph with css layout
+            .footer p{
+                font-size: 20px;
+                text-align: center;
+                padding: 10px;
+            }
+            @media (max-width: 768px) {
+                .grid {
+                    grid-template-areas:
+                      "header"
+                      "navigation"
+                      "content"
+                      "sidebar"
+                      "footer";
+                    grid-template-columns: 1fr; /* single column layout */
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div class="grid">
+            <div class="header">
+                <h1>Family</h1>
+            </div>
+            <div class="navigation">
+                <h2>Contents</h2>
+                <ul>
+                    <li><a href="#iot">What is family?</a></li>
+                    <li><a href="#eg">Members in Family</a></li>
+                    <li><a href="#app">Benefits of Family</a></li>
+                    <li><a href="#working">Love of Family</a></li>
+                    <li><a href="#adv">Advantages of IOT</a></li>
+                    <li><a href="#Dis">Disadvantages of IOT</a></li>
+                </ul>
+            </div>
+            <div class="content">
+                <div class="bar">
+                <section id="iot">
+                    <h3>What is Family?</h3>
+                    <p> A family is a group of two or more persons related by birth, marriage, or adoption who live together; all such related persons are considered as members of one family.</p>
+                </section>
+                <section id="eg">
+                    <h3>Members in Family</h3>
+                    <ul>
+                        <li>Dad</li>
+                        <li>Mother</li>
+                        <li>Brother</li>
+                        <li>Sister</li>
+                        <li>elder bro</li>
+                        <li>younger bro</li>
+                        <li>elder sis</li>
+                        <li>younger sis</li>
+                    </ul>
+                </section>
+                <section id="app">
+                    <h3>benifit of family</h3>
+                    <p>Families offer numerous benefits, including emotional support, a sense of belonging, and guidance, which are crucial for individuals' well-being and development.</p>
+                </section>
+                <section id="working">
+                    <h3>Love of Family</h3>
+                    <p>Family love is a profound bond characterized by deep affection, support, and a sense of belonging. It's often described as unconditional, meaning it's not dependent on achievements or circumstances</p>
+                </section>
+                <section id="adv">
+                    <h3>Advantages of Family:</h3>
+                    <ul>
+                        <li>Family offers significant benefits, including strong emotional support and a sense of belonging, which are crucial for well-being and resilience. </li>
+                        <li> Furthermore, family provides practical assistance, guidance, and a foundation for socialization, shaping an individual's development and values</li>
+                        <li> Family members can also offer mutual help, making life more economical and providing a healthy atmosphere.</li>
+                        <li>Finally, the shared experiences and knowledge within a family can create a strong sense of community and reduce boredom. </li>
+                        <li>A family leads by his father and mother.</li>
+                        <li>Most important one is they show loved between them.</li>
+                    </ul>
+                </section>
+                <section id="Dis">
+                    <h3>8 lines about family</h3>
+                    <ul>
+                        <li>I have a wonderful family. ...</li>
+                        <li>I live with my grandparents and parents. ...</li>
+                        <li>My father is an engineer. ...</li>
+                        <li>My grandfather is a doctor and my grandmother is a housewife.</li>
+                        <li>My uncle and aunt are lawyers. ...</li>
+                        <li>We love each other.</li>
+                        <li>We go for picnics on holidays.</li>
+                         <li>We eat dinner together every evening</li>
+                    </ul>
+                </section>
+            </div>
+            </div>
+            <div class="sidebar">
+                <h2>Sidebar</h2>
+                <h4>Note:</h4><p>A family has a main goal thst is they want a healthy relationship between the members</p>
+                <ul>
+                    <li>Family</li>
+                    <li>Member</li>
+                    <li>Benefits</li>
+                    <li>Advantages</li>
+                    <li>some lines about family</li>
+                </ul>
+                <p>Contact: vasuvs3101@gmail.com</p>
+            </div>
+            <div class="footer">
+                <p>@2025 ABOUT FAMILY.All the websites are reserved.</p>
+            </div>
         </div>
-        <div class="nav">
-            <h3>Navigation</h3>
-            <ul>
-            <li><a href="section-1">Introduction</a></li>
-            <li><a href="section-2">Narrative Essay Topics</a></li>
-            <li><a href="section-3">Compare and Contrast Essay Topics</a></li>
-            <li><a href="section-4">Cause and Effect Essay Topics</a></li>
-            <li><a href="section-5">conclusion</a></li>
-            </ul>
-        </div>
-        <div class="main">
-            <h2 id="section-1">Introduction</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum, voluptas minus autem sit maiores, aspernatur fugit eos corporis ipsum sapiente debitis beatae omnis. Consequatur nemo, necessitatibus minus repellat ducimus nulla.</p>
-            <h2 id="section-2">Narrative Essay Topics</h2>
-            <p>A narrative essay is a type of writing that tells the writer's story and experiences. The writer's point of view and life events entertain the audience in this essay type.</p>
-            <h2 id="section-3">Compare and Contrast Essay Topics</h2>
-            <p>In a compare and contrast essay, you show how two things are similar and different. This essay type is easy to write because you don’t need to use facts, but you have to express your thoughts.</p>
-            <h2 id="section-4">Cause and Effect Essay Topics</h2>
-            <ul>
-                <li>Mobile healthcare units or stationary clinics.</li>
-                <li>Formulas of two different chemical reactions.</li>
-                <li>Chocolate and marmalade candies.</li>
-                <li>British colonization and Spanish colonization.</li>
-                <li>Public vs. private transportation.</li>
-            </ul>
-            <h2 id="section-5">conclusion</h2>
-            <P>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat quo perferendis excepturi saepe? Quis, repudiandae quibusdam. Ullam reprehenderit praesentium soluta fugiat! Ipsam dolor obcaecati asperiores incidunt veritatis fuga? Aliquid, nesciunt?</P>
-        </div>
-        <div class="sidebar">
-            <h2>Sidebar</h2>
-            <p><strong>Note:</strong>An expository essay's main goal is to explain a process or a cause-and-effect relationship.</p>
-            <ul>
-                <li>grid-template-columns</li>
-                <li>grid-area</li>
-                <li>grid-template-rows</li>
-                <li>gap</li>
-            </ul>
-            <p>contact:vasuvs@example.com</p>
-        </div>
-        <div class="footer">
-            &copy;2025 web design lab.All in the websites are reserved.
-        </div>
-    </div>
-</body>
+    </body>
+</html>
