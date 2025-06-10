@@ -34,11 +34,25 @@
             padding:20px; 
             overflow-y: auto;
         }
-        .right{
-            grid-area: right;
-            background-color: rgb(255, 81, 0);
-            padding:20px;
-        }
+         .sidebar{
+                grid-area: sidebar;
+                background-color: darkmagenta;
+                padding: 10px;
+            }
+            .sidebar h2{
+                color:lavender;
+                font-family: cursive;
+                font-size: 35px;
+            }
+            .sidebar ul{
+                font-size: 20px;
+            }
+            .sidebar h4{
+                font-size: 20px;
+            }
+            .sidebar p{
+                font-size: 20px;
+            }
         .footer{
             grid-area:footer;
             background-color: blueviolet;
@@ -70,14 +84,18 @@
 </head>
 <body>
     <div class="grid-container">
-        <div class="header">A beautiful paragraph with css layout</div>
+        <div class="header">
+            A beautiful paragraph with css layout
+        </div>
         <div class="nav">
             <h3>Navigation</h3>
-            <a href="section-1">Introduction</a>
-            <a href="section-2">Narrative Essay Topics</a>
-            <a href="section-3">Compare and Contrast Essay Topics</a>
-            <a href="section-4">Cause and Effect Essay Topics</a>
-            <a href="section-5">conclusion</a>
+            <ul>
+            <li><a href="section-1">Introduction</a></li>
+            <li><a href="section-2">Narrative Essay Topics</a></li>
+            <li><a href="section-3">Compare and Contrast Essay Topics</a></li>
+            <li><a href="section-4">Cause and Effect Essay Topics</a></li>
+            <li><a href="section-5">conclusion</a></li>
+            </ul>
         </div>
         <div class="main">
             <h2 id="section-1">Introduction</h2>
@@ -97,7 +115,7 @@
             <h2 id="section-5">conclusion</h2>
             <P>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat quo perferendis excepturi saepe? Quis, repudiandae quibusdam. Ullam reprehenderit praesentium soluta fugiat! Ipsam dolor obcaecati asperiores incidunt veritatis fuga? Aliquid, nesciunt?</P>
         </div>
-        <div class="right">
+        <div class="sidebar">
             <h2>Sidebar</h2>
             <p><strong>Note:</strong>An expository essay's main goal is to explain a process or a cause-and-effect relationship.</p>
             <ul>
